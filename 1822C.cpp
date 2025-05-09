@@ -110,15 +110,9 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 void solve(){ _
 
     int t; cin >> t;
-    vector<int> memo(10e9+1);
-    int p = 11; memo[4] = 26;
-    for(int i = 5; i < memo.size(); i++){
-        memo[i] = memo[i-1] + p;
-        p+=2;
-    }
     while (t--){
-        int n; cin >> n;
-        cout << memo[n] << endl;
+        ll n; cin >> n;
+        cout << n*n + 2*(n+1) << endl;
     }
 
 }
